@@ -27,18 +27,8 @@ class MainActivityInstrumentedTest {
     val mActivityRule: ActivityTestRule<MainActivity> = ActivityTestRule(MainActivity::class.java)
 
     @Test
-    open fun showAppName() {
-        onView(withId(R.id.appName)).check(matches(isDisplayed()))
-    }
-
-    @Test
-
     open fun redirectToLoginActivityOnClick() {
 
-        onView(withId(R.id.signInButton))
-                .perform(click())
-
-        intended(hasComponent(LoginActivity.javaClass.name))
     }
 }
 
